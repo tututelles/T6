@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turma Medicina 2024 - Universidade</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Cores principais */
+        :root {
+            --verde-claro: #A8E6CF;
+            --verde-escuro: #1B5E20;
+            --preto: #1A1A1A;
+            --laranja: #FF8C42;
+            --branco: #FFFFFF;
+            --cinza-claro: #F8F9FA;
+        }
+
+        /* Header */
+        header {
+            background: white 0.5;
+            padding: 1rem 0;
+            position: fixed;
+            width: 50%;
+            top: 0;
+            z-index: 1000;
+            margin-left: 25%;
+            border-radius: 40px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .person{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+        }
+        .person img{
+            max-height: 1000px;
+        }
+        .person h1{
+            margin-top: auto;
+            margin-bottom: auto;
+            color: black;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--branco);
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--laranja);
+            margin-right: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--laranja);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--verde-claro) 0%, var(--verde-escuro) 50%, var(--preto) 100%);
+            margin-top: -120px;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--branco);
+            padding-top: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--laranja);
+            color: var(--branco);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s both;
+            box-shadow: 0 10px 30px rgba(255,140,66,0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,140,66,0.6);
+        }
+
+        /* Carousel Section */
+        .carousel-section {
+            padding: 100px 0;
+            background: var(--cinza-claro);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--verde-escuro);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--laranja);
+            border-radius: 2px;
+        }
+
+        footer {
+            background: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .person-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+                height: auto;
+            }
+
+            .person-image {
+                margin-right: 0;
+                margin-bottom: 2rem;
+                width: 200px;
+                height: 280px;
+            }
+
+            .person-info h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <i class="fas fa-heartbeat"></i>
+                Turma Medicina 2024
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#turma">Nossa Turma</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="card">
+                <div class="person">
+                    <img src="ArhurT.png" alt="">
+                    <h1>Arthur Telles</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Turma de Medicina. Todos os direitos reservados. | Feito com <i class="fas fa-heart" style="color: var(--laranja);"></i> para salvar vidas.</p>
+        </div>
+    </footer>
+
+    <script>
+        class Carousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.carousel-slide');
+                this.dots = document.querySelectorAll('.dot');
+                this.totalSlides = this.slides.length;
+                this.autoPlayInterval = null;
+
+                this.init();
+            }
+
+            init() {
+                this.bindEvents();
+                this.startAutoPlay();
+                this.updateCarousel();
+            }
+
+            bindEvents() {
+                // Arrows
+                document.querySelector('.prev').addEventListener('click', () => this.prevSlide());
+                document.querySelector('.next').addEventListener('click', () => this.nextSlide());
+
+                // Dots
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Keyboard
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                });
+
+                // Pause on hover
+                const carouselContainer = document.querySelector('.carousel-container');
+                carouselContainer.addEventListener('mouseenter', () => this.pauseAutoPlay());
+                carouselContainer.addEventListener('mouseleave', () => this.startAutoPlay());
+            }
+
+            goToSlide(slideIndex) {
+                this.currentSlide = slideIndex;
+                this.updateCarousel();
+            }
+
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            updateCarousel() {
+                const carousel = document.querySelector('.carousel');
+                carousel.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+
+                // Update active states
+                this.slides.forEach((slide, index) => {
+                    const card = slide.querySelector('.person-card');
+                    card.classList.toggle('active', index === this.currentSlide);
+                });
+
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+
+            startAutoPlay() {
+                this.autoPlayInterval = setInterval(() => {
+                    this.nextSlide();
+                }, 5000);
+            }
+
+            pauseAutoPlay() {
+                clearInterval(this.autoPlayInterval);
+            }
+        }
+
+        // Smooth scroll para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Inicializar carousel quando a página carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            new Carousel();
+        });
+
+        // Intersection Observer para animações
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.person-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

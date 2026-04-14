@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turma Medicina 2024</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <i class="fas fa-heartbeat"></i>
+                Turma Medicina 2024
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#turma">Turma</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section com Carousel Principal -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="carousel-container">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                    <div class="student-profile">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&h=700&fit=crop&crop=face" alt="Ana Silva">
+                        </div>
+                        <div class="student-info">
+                            <h2 class="student-name">Ana Silva</h2>
+                            <div class="student-age">23 anos</div>
+                            <div class="student-city">
+                                <i class="fas fa-map-marker-alt"></i>
+                                São Paulo, SP
+                            </div>
+                            <p class="student-desc">Estudante dedicada de medicina com paixão por cardiologia. Voluntária em projetos sociais de saúde comunitária.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <div class="student-profile">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=500&h=700&fit=crop&crop=face" alt="João Santos">
+                        </div>
+                        <div class="student-info">
+                            <h2 class="student-name">João Santos</h2>
+                            <div class="student-age">24 anos</div>
+                            <div class="student-city">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Rio de Janeiro, RJ
+                            </div>
+                            <p class="student-desc">Apaixonado por neurologia e tecnologia médica. Desenvolve aplicativos para monitoramento de pacientes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <div class="student-profile">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=700&fit=crop&crop=face" alt="Maria Oliveira">
+                        </div>
+                        <div class="student-info">
+                            <h2 class="student-name">Maria Oliveira</h2>
+                            <div class="student-age">22 anos</div>
+                            <div class="student-city">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Belo Horizonte, MG
+                            </div>
+                            <p class="student-desc">Especialista em saúde da mulher. Atua em projetos de prevenção e educação em saúde pública.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                    <div class="student-profile">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=700&fit=crop&crop=face" alt="Pedro Costa">
+                        </div>
+                        <div class="student-info">
+                            <h2 class="student-name">Pedro Costa</h2>
+                            <div class="student-age">25 anos</div>
+                            <div class="student-city">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Curitiba, PR
+                            </div>
+                            <p class="student-desc">Entusiasta de cirurgia ortopédica e medicina esportiva. Campeão de maratonas amadoras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões de Navegação -->
+            <div class="carousel-nav">
+                <button class="nav-btn prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <button class="nav-btn next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Turma de Medicina. Feito com <i class="fas fa-heart" style="color: #FF8C42;"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
